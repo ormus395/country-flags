@@ -1,0 +1,231 @@
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/*
+- Mobile: 375px
+- Desktop: 1440px
+
+- Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+- Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+- Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+- Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+- Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+- White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
+
+- Family: [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans)
+- Weights: 300, 600, 800
+
+- [Font Awesome](https://fontawesome.com)
+*/
+
+* {
+   box-sizing: border-box;
+}
+
+html {
+   font-family: 'Nunito Sans', sans-serif;
+   font-size: 14px;
+}
+
+body {
+   background-color: hsl(0, 0%, 98%);
+   max-width: 375px;
+}
+
+input::placeholder {
+   color: hsl(0, 0%, 52%);
+   font-weight: 300;
+}
+
+ul {
+   list-style-type: none;
+}
+
+.container {
+   margin:0 1rem;
+}
+
+.hidden {
+   position: absolute; 
+   overflow: hidden; 
+   clip: rect(0 0 0 0); 
+   height: 1px; width: 1px; 
+   margin: -1px; padding: 0; border: 0; 
+}
+
+.shadow {
+   box-shadow: 2px 2px 8px -5px hsl(0, 0%, 52%),
+   -2px -2px 8px -5px hsl(0, 0%, 52%);
+}
+
+/* header */
+
+header {
+   align-items: center;
+   background-color: hsl(0, 0%, 100%);
+   box-shadow: 0 2px 8px -5px hsl(0, 0%, 52%);
+   display: flex;
+   height: 5em;
+   justify-content: space-between;
+   padding: 0 1rem;
+   margin-bottom: 2rem;
+   vertical-align: middle;
+   width: 100%;
+}
+
+.logo {
+   font-weight: 800;
+}
+
+.darkmode__title {
+   font-weight: 600;
+}
+
+.darkmode__icon {
+   display: inline-block;
+   width: 1rem;
+}
+
+.darkmode img {
+   width: 100%;
+}
+
+/* main */
+
+/* search bar */
+.search-bar {
+   align-items: center;
+   background-color: hsl(0, 0%, 100%);
+   border-radius: 5px;
+   display: flex;
+   height: 4rem;
+   margin-top: 2rem;
+   padding: 0 1rem;
+}
+
+.search-bar__icon {
+   background-image: url(../assets/img/search-circle-outline.svg);
+   background-size: cover;
+   display: inline-block;
+   height: 2rem;
+   width: 2rem;
+}
+
+.search-bar__input {
+   display: inline-block;
+   border: none;
+   height: 2rem;
+   outline: none;
+   padding: 0 2rem;
+}
+
+/* filter */
+.filter {
+   font-weight: 600;
+   margin-top: 2rem;
+   padding: 0 1rem;
+   position: relative;
+   width: 100%;
+}
+
+.filter__container {
+   background-color: hsl(0, 0%, 100%);
+   border-radius: 5px;
+   display: flex;
+   align-items: center;
+   height: 4rem;
+   justify-content: space-between;
+   padding: 1.5rem;
+   position: relative;
+   width: 60%;
+}
+
+.filter__icon {
+   background-image: url(../assets/img/chevron-down-outline.svg);
+   background-size: cover;
+   display: inline-block;
+   height: 1rem;
+   width: 1rem;
+}
+
+.filter__dropdown {
+   background-color: hsl(0, 0%, 100%);
+   border-radius: 5px;
+   margin-top: .5rem;
+   position: absolute;
+   width: 55%;
+   z-index: 1000;
+}
+
+.filter__list {
+   padding: 1rem 1.5rem;
+}
+
+.filter__item {
+   font-weight: 600;
+   margin-top: 1rem;
+}
+/* countries section */
+.countries {
+   margin-top: 2rem;
+}
+
+.country__card {
+   border-radius: 5px;
+   margin: 3rem auto;
+   width: 80%;
+}
+
+.country__flag {
+   height: 45%;
+   width: 100%;
+}
+
+.country__flag img {
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+   width: 100%;
+}
+
+.country__title {
+   font-size: 1.5rem;
+   font-weight: 800;
+   padding: 0 1.5rem;
+   margin-top: 2rem;
+}
+
+.country__info {
+   margin-top: 1rem;
+   padding-left: 1.5rem;
+   padding-bottom: 2rem;
+}
+
+.info__item {
+   padding-top: .5rem;
+}
+
+.info__item span {
+   font-weight: 800;
+   text-transform: capitalize;
+}
+
+
+

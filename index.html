@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Country Banners</title>
+   <link rel="stylesheet" href="css/main.css">
+   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <header>
+      <div class="logo">Where in the world?</div>
+      <div class="darkmode">
+         <p class="darkmode__title">
+            <span class="darkmode__icon">
+               <img src="assets/img/moon-outline.svg" alt="">
+            </span>
+            Dark Mode
+         </p>
+      </div>
+   </header>
+   <main id="app">
+      <!-- <section class="search-bar container shadow">
+         <span class="search-bar__icon"></span>
+         <form class="search-bar__form" action="">
+            <input class="search-bar__input" type="text" placeholder="Search for country...">
+         </form>
+      </section> -->
+      <section class="filter">
+         <div class="filter__container shadow">
+            <p class="filter__title">
+               Filter by region
+            </p>
+            <div class="filter__icon"></div>
+         </div>
+         <div class="filter__dropdown shadow">
+            <ul class="filter__list">
+               <li class="filter__item">Africa</li>
+               <li class="filter__item">America</li>
+               <li class="filter__item">Asia</li>
+               <li class="filter__item">Europe</li>
+               <li class="filter__item">Oceania</li>
+            </ul>
+         </div>
+      </section>
+      <section class="countries">
+      </section>
+   </main>
+   <script src="./js/search.js"></script>
+   <script src="./js/countryCard.js"></script>
+   <script src="js/main.js"></script>
+</body>
+
+</html>

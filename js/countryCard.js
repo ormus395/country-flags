@@ -7,10 +7,13 @@ class CountryCard {
          region: country.region,
          capital: country.capital
       }
+
+      this.article = document.createElement('article');
+      this.init();
    }
 
    init() {
-      let article = document.createElement('article');
+      let article = this.article;
       article.classList.add('country__card', 'shadow');
 
       let flagHolder = document.createElement('div');
@@ -46,11 +49,9 @@ class CountryCard {
       article.appendChild(flagHolder);
       article.appendChild(title);
       article.appendChild(countryInfo);
-
-      return article;
    }
 
    render() {
-      return this.init();
+      return this.article;
    }
 }

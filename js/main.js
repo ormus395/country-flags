@@ -14,15 +14,16 @@ class App {
       console.log('App running');
       const app = document.getElementById('app');
       const search = new Search();
+      const filter = new Filter();
       const countrySection = document.querySelector('.countries');
 
+      app.prepend(filter.render());
       app.prepend(search.render());
       await this.buildCountryArray();
 
       for (let i = 0; i < this.countryCards.length; i++) {
          countrySection.appendChild(this.countryCards[i].render());
       }
-      this.addEventListeners(sea)
    }
 
    async fetchCountries() {

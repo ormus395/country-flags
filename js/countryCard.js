@@ -49,6 +49,14 @@ class CountryCard {
       article.appendChild(flagHolder);
       article.appendChild(title);
       article.appendChild(countryInfo);
+
+      article.addEventListener('click', () => {
+         this.onClick();
+      })
+   }
+
+   onClick(event) {
+      console.log(countriesApp.renderCountryPage(this.name));
    }
 
    render() {

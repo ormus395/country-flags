@@ -8,11 +8,12 @@ class App {
       this.countryCards = [];
       this.url = 'https://restcountries.eu/rest/v2/all';
       this.isCountryView = false;
+      this.app = document.getElementById('app');
    }
 
    async init() {
       console.log('App running');
-      const app = document.getElementById('app');
+      const app = this.app;
       const search = new Search();
       const filter = new Filter();
       const countrySection = document.querySelector('.countries');
@@ -52,8 +53,14 @@ class App {
       })
    }
 
-   addEventListeners(element, event, callback) {
-      element.addEventListener(event, callback);
+   renderCountryPage(name) {
+      let countryPage = new CountryPage(name);
+      let child = this.app.lastElementChild;
+
+      while (child) {
+         this.app.removeChild(child);
+         child = this.app.lastElementChild;
+      }
    }
 }
 
